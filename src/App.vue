@@ -2,6 +2,9 @@
   <div class="container mx-auto">
     <h1>Hello</h1>
   </div>
+  <div class="container mx-auto">
+    <quote-grid :quotes="quotes" @quoteDeleted="deleteQuote"></quote-grid>
+  </div>
 </template>
 
 <script>
