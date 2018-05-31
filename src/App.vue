@@ -28,6 +28,9 @@ export default {
   },
   methods: {
     newQuote(quote) {
+      if (this.quotes.length >= this.maxQuotes) {
+        return alert('Пожалуйста, сначала удалите цитату!');
+      }
       this.quotes.push(quote);
     },
     deleteQuote(index) {
