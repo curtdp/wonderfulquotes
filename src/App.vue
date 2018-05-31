@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import QuoteGrid from "./components/QuoteGrid.vue";
 export default {
   data() {
     return {
@@ -15,8 +16,19 @@ export default {
       quotes: ["Просто цитата чтобы что-то увидеть"]
     };
   },
+  methods: {
+    newQuote(quote) {
+      this.quotes.push(quote);
+    },
+    deleteQuote(index) {
+      this.quotes.splice(index, 1);
+    }
+  },
   name: "app",
   components: {}
+  components: {
+    QuoteGrid,
+  }
 };
 </script>
 
